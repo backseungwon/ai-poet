@@ -5,8 +5,11 @@ import streamlit as st
 import time
 
 
+api_key = st.secrets["OPENAI_API_KEY"]
+
+
 #ChatOpenAI 초기화
-llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7, api_key= api_key)
 
 
 #프롬프트 템플릿 생성
