@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Streamlit with Conda",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": [
+        "run",
+        "${workspaceFolder}/main.py"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "PATH": "C:\\Users\\baegs\\miniconda3\\envs\\langchain;${env:PATH}",
+        "CONDA_DEFAULT_ENV": "langchain"
+      }
+    }
+  ]
+}
