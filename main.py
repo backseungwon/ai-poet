@@ -1,4 +1,4 @@
-from langchain.chat_models import init_chat_model
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
@@ -6,7 +6,7 @@ import time
 
 
 #ChatOpenAI 초기화
-llm = init_chat_model("gpt-4o-mini", model_provider="openai")
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
 
 
 #프롬프트 템플릿 생성
